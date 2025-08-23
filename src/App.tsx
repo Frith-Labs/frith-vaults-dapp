@@ -180,7 +180,6 @@ function Screen() {
     args: address ? [address, VAULT_ADDRESS] : undefined,
     query: { enabled: Boolean(assetAddress && address) },
   })
-  const needsApprove = depAmount > 0n && (allowance ?? 0n) < depAmount
 
   // Write hooks
   const { writeContractAsync, isPending: isWriting } = useWriteContract()
